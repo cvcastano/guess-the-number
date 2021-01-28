@@ -13,4 +13,11 @@ const incrCounter = () => {
     counterElement.innerHTML = value;
     console.log ('me han clickado');
 }
+
+
+   
+//número random como referencia: (ejecutarse una sóla vez --> fuera)
+const randomNumber = Math.ceil(Math.random()*100);
+console.log(randomNumber);
+   
 button.addEventListener ('click', incrCounter);
