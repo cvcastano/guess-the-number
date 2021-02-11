@@ -5,18 +5,16 @@ const button = document.querySelector('.js-button');
 const hintElement = document.querySelector('.js-hint');
 const counterElement = document.querySelector('.js-counter');
 
-function superFunGame () {
-    incrCounter ();
-    narrowNumberDown ();
+function superFunGame() {
+    narrowNumberDown();
 }
 
-const incrCounter = () => {
-    let value = parseInt(counterElement.innerHTML);
-    value++;
-    counterElement.innerHTML = value;
-}
+let value = parseInt(counterElement.innerHTML);
+value++;
+counterElement.innerHTML = value;
 
-function narrowNumberDown (){
+
+function narrowNumberDown() {
     const inputElement = parseInt(document.querySelector('.js-input').value);
     console.log(inputElement);
 
@@ -30,6 +28,7 @@ function narrowNumberDown (){
         hintElement.innerHTML = 'Too low, try a higher number'
     }
 }
+
 
 const randomNumber = Math.ceil(Math.random() * 100);
 console.log(`The random number to guess is ${randomNumber}`);
