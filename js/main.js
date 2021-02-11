@@ -11,13 +11,14 @@ function superFunGame () {
 }
 
 const incrCounter = () => {
-    let value = counterElement.innerHTML;
+    let value = parseInt(counterElement.innerHTML);
     value++;
     counterElement.innerHTML = value;
 }
 
 function narrowNumberDown (){
     const inputElement = parseInt(document.querySelector('.js-input').value);
+    console.log(inputElement);
 
     if (inputElement > 100 || inputElement < 1) {
         hintElement.innerHTML = 'It must be a number between 1 and 100'
